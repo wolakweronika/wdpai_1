@@ -31,9 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Event listener dla formularza POST
     postForm.addEventListener("submit", async function (event) {
-        event.preventDefault(); // Zapobiegamy domyślnemu wysyłaniu formularza
+        event.preventDefault(); 
         const firstName = document.getElementById("firstName").value.trim();
         const lastName = document.getElementById("lastName").value.trim();
         const role = document.getElementById("role").value.trim();

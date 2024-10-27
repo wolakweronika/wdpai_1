@@ -16,29 +16,25 @@ document.getElementById('team-form').addEventListener('submit', function (event)
 function addTeamMember(firstName, lastName, role) {
     const teamMembersList = document.getElementById('team-members');
 
-    // Create a list item
     const listItem = document.createElement('li');
-    listItem.classList.add('team-member');  // Updated to match the CSS class
+    listItem.classList.add('team-member');  
 
-    // Create the container for name and role
+
     const info = document.createElement('div');
     info.classList.add('user-info');
     info.innerHTML = `<span class="name">${firstName} ${lastName}</span><span class="role">${role}</span>`;
 
-    // Create the delete button
     const deleteButton = document.createElement('button');
-    deleteButton.classList.add('delete-btn');  // Updated to match the CSS class
-    deleteButton.innerHTML = '🗑️';  // Trash icon emoji
+    deleteButton.classList.add('delete-btn');  
+    deleteButton.innerHTML = '🗑️';  
 
-    // Add event listener to remove the team member on click
+  
     deleteButton.addEventListener('click', function () {
         teamMembersList.removeChild(listItem);
     });
 
-    // Append the info and delete button to the list item
     listItem.appendChild(info);
     listItem.appendChild(deleteButton);
 
-    // Append the list item to the team members list
     teamMembersList.appendChild(listItem);
 }
